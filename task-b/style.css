@@ -1,0 +1,53 @@
+/*
+Author: Ville Heikkiniemi (CHANGE THIS)
+Date: 2025-09-01 (CHANGE THIS)
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #bc810d;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #2817a9;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2817a9;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #c82727;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    color: #bd27a6;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    color: #27a6bd;
+}
+
+a {
+    color: #27bd4f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
