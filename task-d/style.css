@@ -1,0 +1,79 @@
+/*
+Author: Vitus Wagensonner
+Date: 2025-09-26
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #0044cc;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+
+.box {
+    border: 2px solid #0044cc;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #eef3ff;
+}
+
+.card {
+    border: 2px dashed #ff8800;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff8e6;
+}
+
+.highlight {
+    color: #d40000;
+    font-weight: bold;
+}
+
+
+#special-message {
+    background-color: #ccf2ff;
+    padding: 10px;
+    border-left: 5px solid #00aaff;
+}
+
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+
+section ul li {
+    color: #006600;
+    margin-bottom: 5px;
+}
+
+
+a[target="_blank"] {
+    color: #ff3300;
+    text-decoration: none;
+    border-bottom: 1px dotted #ff3300;
+}
+
+a[target="_blank"]:hover {
+    color: #cc0000;
+    border-bottom: 1px solid #cc0000;
+}
+
+img[alt] {
+    border: 3px solid #333;
+    border-radius: 6px;
+    display: block;
+    margin-top: 10px;
+}
