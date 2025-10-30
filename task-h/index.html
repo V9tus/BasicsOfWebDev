@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Task H — Tailwind CSS Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<!--
+    Author: Vitus Wagensonner
+    Date: 2025-10-30
+    -->
+
+<body class="min-h-screen bg-slate-100 text-slate-800 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-6 shadow">
+        <h1 class="text-center text-2xl font-semibold tracking-wide">
+            Subscription Page
+        </h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto p-6 space-y-6">
+        <!-- Top Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Student Info -->
+            <section class="bg-white border border-slate-300 rounded-2xl p-6 shadow-sm"
+                aria-label="Student information">
+                <h2 class="text-lg font-semibold mb-3 text-slate-700">
+                    Information
+                </h2>
+                <p class="text-slate-600 font-medium">Vitus Wagensonner</p>
+                <p class="text-slate-500">NBMS24K</p>
+            </section>
+
+            <!-- Controls / Form -->
+            <section class="bg-white border border-slate-300 rounded-2xl p-6 shadow-sm" aria-label="Add course row">
+                <h2 class="text-lg font-semibold mb-4 text-slate-700">
+                    Add Information
+                </h2>
+
+                <form id="addCourseForm" novalidate class="space-y-4">
+                    <input type="hidden" id="timestamp" name="timestamp" />
+
+                    <!-- Name -->
+                    <div>
+                        <label for="fullName" class="block mb-1 font-medium">Full name</label>
+                        <input id="fullName" name="fullName" type="text" required placeholder="e.g., Jane Doe"
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                        <p id="nameError" class="text-red-600 text-sm mt-1"></p>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block mb-1 font-medium">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="e.g., jane@example.com"
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                        <p id="emailError" class="text-red-600 text-sm mt-1"></p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" class="block mb-1 font-medium">Phone</label>
+                        <input id="phone" name="phone" type="tel" required placeholder="e.g., +358401234567"
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                        <p id="phoneError" class="text-red-600 text-sm mt-1"></p>
+                    </div>
+
+                    <!-- Birth Date -->
+                    <div>
+                        <label for="birthDate" class="block mb-1 font-medium">Birth date</label>
+                        <input id="birthDate" name="birthDate" type="date" required
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                        <p id="birthError" class="text-red-600 text-sm mt-1"></p>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="flex items-center space-x-2">
+                        <input id="terms" name="terms" type="checkbox"
+                            class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                        <label for="terms" class="text-sm text-slate-700">I accept the terms and conditions</label>
+                    </div>
+                    <p id="termsError" class="text-red-600 text-sm mt-1"></p>
+
+                    <!-- Buttons -->
+                    <div class="flex space-x-3 pt-2">
+                        <button type="submit"
+                            class="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">
+                            Submit
+                        </button>
+                        <button type="reset"
+                            class="border border-slate-300 text-slate-700 px-4 py-2 rounded-md hover:bg-slate-100 transition">
+                            Clear
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-white border border-slate-300 rounded-2xl p-4 shadow-sm overflow-x-auto">
+            <table class="w-full border-collapse text-sm md:text-base">
+                <thead>
+                    <tr class="bg-blue-900 text-white">
+                        <th class="text-left p-2">Timestamp</th>
+                        <th class="text-left p-2">Full name</th>
+                        <th class="text-left p-2">Email</th>
+                        <th class="text-left p-2">Phone</th>
+                        <th class="text-left p-2">Birth date</th>
+                        <th class="text-center p-2">Accepted Terms</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable" class="divide-y divide-slate-200"></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
