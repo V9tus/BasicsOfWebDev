@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideNow | Order</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-800 font-sans">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-green-600">RideNow</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#about" class="hover:text-green-600">About</a>
+                <a href="index.html#bikes" class="hover:text-green-600">Bikes</a>
+                <a href="index.html#features" class="hover:text-green-600">Why Us</a>
+                <a href="index.html#contact" class="hover:text-green-600">Contact</a>
+                <a href="catalog.html" class="hover:text-green-600">Catalog</a>
+                <a href="order.html" class="hover:text-green-600 font-semibold">Order</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-4xl mx-auto px-4 py-16">
+
+        <!-- INTRO -->
+        <section class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-green-600 mb-4">Request Your E-Bike Rental</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                Fill out the form below to book your preferred e-bike. We'll confirm availability and get back to you
+                promptly.
+            </p>
+        </section>
+
+        <!-- ORDER FORM -->
+        <section>
+            <form id="rentalForm" action="thanks.html" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
+
+                <!-- CUSTOMER INFO -->
+                <fieldset class="space-y-4">
+                    <legend class="text-xl font-semibold text-green-600">Your Information</legend>
+
+                    <div>
+                        <label for="fullName" class="block font-medium mb-1">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-medium mb-1">Email Address*</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block font-medium mb-1">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9+()\- ]{7,20}"
+                            placeholder="+49 123 456 7890"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                </fieldset>
+
+                <!-- RENTAL DETAILS -->
+                <fieldset class="space-y-4">
+                    <legend class="text-xl font-semibold text-green-600">Rental Details</legend>
+
+                    <div>
+                        <label for="item" class="block font-medium mb-1">Select E-Bike*</label>
+                        <select id="item" name="item" required
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                            <option value="">-- Choose a bike --</option>
+                            <option value="city-cruiser">City Cruiser</option>
+                            <option value="trail-explorer">Trail Explorer</option>
+                            <option value="fold-go">Fold & Go</option>
+                            <option value="cargo-pro">Cargo Pro</option>
+                            <option value="sport-performance">Sport Performance</option>
+                            <option value="comfort-step">Comfort Step-Through</option>
+                        </select>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="startDate" class="block font-medium mb-1">Start Date*</label>
+                            <input type="date" id="startDate" name="startDate" required min="<?= date('Y-m-d') ?>"
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="endDate" class="block font-medium mb-1">End Date*</label>
+                            <input type="date" id="endDate" name="endDate" required min="<?= date('Y-m-d') ?>"
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="quantity" class="block font-medium mb-1">Quantity*</label>
+                        <input type="number" id="quantity" name="quantity" required min="1" max="10" value="1"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
+                    </div>
+                </fieldset>
+
+                <!-- ADDITIONAL INFO & CONSENT -->
+                <fieldset class="space-y-4">
+                    <legend class="text-xl font-semibold text-green-600">Additional Information</legend>
+
+                    <div>
+                        <label for="message" class="block font-medium mb-1">Message / Special Requests</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500"
+                            placeholder="Any special requests?"></textarea>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="terms" required
+                                class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-2 focus:ring-green-500">
+                            <span>I accept the rental terms and privacy policy*</span>
+                        </label>
+
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="newsletter"
+                                class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-2 focus:ring-green-500">
+                            <span>Subscribe to newsletter (optional)</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit"
+                    class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 w-full">
+                    Submit Rental Request
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold mb-2 text-white">RideNow</h3>
+                <p>Your partner in sustainable city travel.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2 text-white">Quick Links</h4>
+                <ul class="space-y-1">
+                    <li><a href="index.html#about" class="hover:text-green-500">About</a></li>
+                    <li><a href="catalog.html" class="hover:text-green-500">Catalog</a></li>
+                    <li><a href="order.html" class="hover:text-green-500">Order</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2 text-white">Contact</h4>
+                <p>Email: info@ridenow.com</p>
+                <p>Phone: +358 123 456 789</p>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-10">&copy; 2025 RideNow. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
