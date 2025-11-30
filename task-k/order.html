@@ -36,7 +36,7 @@
 
         <!-- INTRO -->
         <section class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-green-600 mb-4">Request Your E-Bike Rental</h1>
+            <h2 class="text-4xl font-bold text-green-600 mb-4">Request Your E-Bike Rental</h2>
             <p class="text-gray-600 text-lg max-w-2xl mx-auto">
                 Fill out the form below to book your preferred e-bike. We'll confirm availability and get back to you
                 promptly.
@@ -45,6 +45,7 @@
 
         <!-- ORDER FORM -->
         <section>
+            <h2 class="text-2xl font-semibold text-green-600">Order Form</h2>
             <form id="rentalForm" action="thanks.html" method="POST" class="bg-white shadow-lg rounded-2xl p-8 space-y-6">
 
                 <!-- CUSTOMER INFO -->
@@ -91,13 +92,13 @@
 
                     <div class="grid md:grid-cols-2 gap-4">
                         <div>
-                            <label for="startDate" class="block font-medium mb-1">Start Date*</label>
-                            <input type="date" id="startDate" name="startDate" required min="<?= date('Y-m-d') ?>"
+                            <input type="date" id="startDate" name="startDate" required min="2025-11-22"
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
                         </div>
                         <div>
-                            <label for="endDate" class="block font-medium mb-1">End Date*</label>
-                            <input type="date" id="endDate" name="endDate" required min="<?= date('Y-m-d') ?>"
+                            <input type="date" id="endDate" name="endDate" required min="2025-11-22"
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500">
                         </div>
                     </div>
