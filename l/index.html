@@ -1,0 +1,153 @@
+<!--
+    Author: Carolyn Ott, Vitus Wagensonner
+    Date: 2025-12-12
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideNow | E-Bike Rentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-800 font-sans">
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-green-600">RideNow</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-green-600">About</a>
+                <a href="#bikes" class="hover:text-green-600">Bikes</a>
+                <a href="#features" class="hover:text-green-600">Why Us</a>
+                <a href="#contact" class="hover:text-green-600">Contact</a>
+                <a href="catalog.html" class="hover:text-green-600 font-semibold">Catalog</a>
+                <a href="order.html" class="hover:text-green-600 font-semibold">Order</a>
+            </nav>
+            <a href="order.html" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Book Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative bg-green-700 text-white h-[80vh] flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-green-700 to-green-800"></div>
+        <div class="relative z-10 max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Go Further, Faster</h2>
+            <p class="text-lg md:text-2xl mb-6">Explore your city with eco-friendly e-bikes — wherever, whenever.</p>
+            <a href="#bikes" class="bg-white text-green-800 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100">
+                Explore Bikes
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-4">About RideNow</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                At RideNow, we believe in greener cities and smarter mobility. We provide high-quality electric bikes
+                for short- and long-term rentals, helping you move freely without emissions or limits.
+            </p>
+        </div>
+    </section>
+
+    <!-- BIKES -->
+    <section id="bikes" class="py-16 max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Our Bestsellers</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Electric_bike_for_commuting.jpg"
+                    alt="City E-Bike" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">City Cruiser</h3>
+                    <p class="text-gray-600 mb-4">Perfect for daily commutes and short urban trips with comfort and style.</p>
+                    <span class="font-bold text-green-600">€15/day</span>
+                </div>
+            </article>
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-storefront/default/dwead92c71/category-landing/mountain/seo-mtb-light.jpg?sw=632&sh=356&sm=cut&sfrm=jpg&q=80"
+                    alt="Mountain E-Bike" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Trail Explorer</h3>
+                    <p class="text-gray-600 mb-4">Tackle hills and trails effortlessly with our high-torque mountain e-bike.</p>
+                    <span class="font-bold text-green-600">€25/day</span>
+                </div>
+            </article>
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/ride-folding-bikes-6491fb43ae3de.jpg?resize=1400:*"
+                    alt="Folding E-Bike" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Fold & Go</h3>
+                    <p class="text-gray-600 mb-4">Compact and portable — ideal for mixed travel or small apartments.</p>
+                    <span class="font-bold text-green-600">€18/day</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-16 bg-green-50">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-8">Why Choose RideNow?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://img.icons8.com/fluency/96/000000/leaf.png" alt="Eco-Friendly icon" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg">Eco-Friendly</h3>
+                    <p class="text-gray-600">Zero emissions, 100% fun.</p>
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/fluency/96/000000/wallet.png" alt="Affordable icon" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg">Affordable</h3>
+                    <p class="text-gray-600">Flexible pricing for every ride.</p>
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/fluency/96/000000/time-machine.png" alt="Flexible Rentals icon" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg">Flexible Rentals</h3>
+                    <p class="text-gray-600">From an hour to a week — you choose.</p>
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/fluency/96/000000/smartphone.png" alt="App Integration icon" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg">App Integration</h3>
+                    <p class="text-gray-600">Unlock bikes directly from our app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section id="contact" class="py-20 text-center bg-green-600 text-white">
+        <h2 class="text-4xl font-bold mb-6">Ready to Ride?</h2>
+        <p class="text-lg mb-8">Join thousands of riders who’ve chosen RideNow for smarter, greener travel.</p>
+        <a href="order.html" class="bg-white text-green-700 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100">
+            Book Now
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold mb-2 text-white">RideNow</h3>
+                <p>Your partner in sustainable city travel.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2 text-white">Quick Links</h4>
+                <ul class="space-y-1">
+                    <li><a href="#about" class="hover:text-green-500">About</a></li>
+                    <li><a href="#bikes" class="hover:text-green-500">Bikes</a></li>
+                    <li><a href="#features" class="hover:text-green-500">Why Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2 text-white">Contact</h4>
+                <p>Email: info@ridenow.com</p>
+                <p>Phone: +358 123 456 789</p>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-10">&copy; 2025 RideNow. All rights reserved.</p>
+    </footer>
+</body>
+</html>
